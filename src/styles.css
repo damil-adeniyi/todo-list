@@ -107,6 +107,12 @@ body {
     border-radius: 10px;
 }
 
+.sidebar-top .projects-cont h3 {
+   color: var(--secondary-color);
+   font-size: 18px;
+   font-weight: 600;
+}
+
 .sidebar .help {
     display: flex;
     align-items: center;
