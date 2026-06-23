@@ -5,19 +5,138 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 400;
 }
 
 p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 :root {
-    --primary-color: #F9F7E2 ;
-    --secondary-color: #2B2B2B ;
-    --background-color: #FDFBF7   ;
+    --primary-color: #202020;
+    --secondary-color: #666666;
+    --secondary-color1: #6666661a;
+    --background-color: #FFFFFF;
+    --sidebarBg: #FCFAF8;
+    --red: #DC4C3E;
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
 }
+
+.main-cont {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    height: 100vh;
+}
+
+.main-cont .sidebar {
+    background-color: var(--sidebarBg);
+    border-right: 1px solid var(--secondary-color);
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    margin-bottom: 30px;
+}
+
+.sidebar .features-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.sidebar .side {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.sidebar .side:hover {
+    background-color: var(--secondary-color1);
+    border-radius: 10px;
+}
+
+.sidebar span {
+    width: 24px;
+    height: 24px;
+}
+
+.addTask svg {
+     color: #DC4C3E;
+}
+
+.sidebar .projects-cont {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.sidebar .projects-cont:hover {
+    background-color: var(--secondary-color1);
+    border-radius: 10px;
+}
+
+.sidebar .help {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.sidebar .help:hover {
+    background-color: var(--secondary-color1);
+    border-radius: 10px;
+}
+
+.nav button {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: all ease-in-out 0.3s;
+    
+}
+.nav button:hover {
+    background-color: var(--secondary-color1);
+    
+}
+
