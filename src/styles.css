@@ -33,9 +33,11 @@ body {
 .main-cont {
     display: grid;
     grid-template-columns: 300px 1fr;
-    height: 100vh;
+    height: 1350px;
 }
 
+
+/* sidebar */
 .main-cont .sidebar {
     background-color: var(--sidebarBg);
     border-right: 1px solid var(--secondary-color);
@@ -146,3 +148,33 @@ body {
     
 }
 
+/* content */
+
+.main-cont .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-cont .content .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sidebarBg);
+    height: 8%;
+    gap: 10px;
+}
+
+.main-cont .content .header h2{
+    font-size: 36px;
+    padding: 10px 20px;
+    color: var(--red);
+    background-color: var(--secondary-color1);
+    border-radius: 10px;
+}
+
+.main-cont .content .body{
+    background-color: var(--sidebarBg);
+    height: 90%;
+    gap: 10px;
+}
