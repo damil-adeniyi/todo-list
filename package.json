@@ -2,13 +2,13 @@
   "name": "restaurant-page",
   "version": "1.0.0",
   "description": "quite clear from the name, its a reataurant page 🤣",
-  "homepage": "https://github.com/damil-adeniyi/Restaurant-Page#readme",
+  "homepage": "https://github.com/damil-adeniyi/todo-list#readme",
   "bugs": {
-    "url": "https://github.com/damil-adeniyi/Restaurant-Page/issues"
+    "url": "https://github.com/damil-adeniyi/todo-list/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/damil-adeniyi/Restaurant-Page.git"
+    "url": "git+https://github.com/damil-adeniyi/todo-list.git"
   },
   "license": "ISC",
   "author": "",
