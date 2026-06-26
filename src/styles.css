@@ -19,10 +19,12 @@ p {
 :root {
     --primary-color: #202020;
     --secondary-color: #666666;
-    --secondary-color1: #6666661a;
+    --secondary-color1: #6666663f;
+    --secondary-color2: #66666613;
     --background-color: #FFFFFF;
     --sidebarBg: #FCFAF8;
     --red: #DC4C3E;
+    --red1: #d11807;
 }
 
 body {
@@ -154,6 +156,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    
 }
 
 .main-cont .content .header{
@@ -173,8 +176,217 @@ body {
     border-radius: 10px;
 }
 
-.main-cont .content .body{
-    background-color: var(--sidebarBg);
+.main-cont .content .body-cont{
+    background-color: var(--background-color);
     height: 90%;
     gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    width: 100%;
+}
+
+.main-cont .content .body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+/* form */
+.main-cont .content .body #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+}
+
+.main-cont .content .body #add-task-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    border: 1px solid var(--secondary-color1);
+    border-radius: 20px;
+}
+
+.main-cont .content .body #add-task-cont #form-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    padding-left: 20px;
+}
+
+
+/* task head */
+.main-cont .content .body #add-task-cont #form-head #task-h{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.main-cont .content .body #add-task-cont #form-head #task-h input{
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    width: 100%;
+    border: 0;
+} 
+
+.main-cont .content .body #add-task-cont #form-head #task-h input:focus{
+  outline: 0;
+} 
+
+.main-cont .content .body #add-task-cont #form-head #task-h #task-title{
+    /* padding: 10px 0px; */
+    padding-left: 0px;
+    font-size: 1.5rem;
+} 
+
+.main-cont .content .body #add-task-cont #form-head #task-h #task-title::placeholder{
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+} 
+
+.main-cont .content .body #add-task-cont #form-head #task-h #task-desc{
+    /* padding: 10px 0px; */
+    padding-left: 0px;
+    font-size: 1rem;
+} 
+
+.main-cont .content .body #add-task-cont #form-head #task-h #task-desc::placeholder{
+    font-size: 1rem;
+    color: var(--secondary-color);
+} 
+
+/* task prop */
+.main-cont .content .body #add-task-cont #form-head #prop{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.main-cont .content .body #add-task-cont #form-head #prop #top-prop{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    border: 1px solid var(--secondary-color1);
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+.main-cont .content .body #add-task-cont #form-head #prop #top-prop h4{
+    font-size: 12;
+    font-weight: 400;
+}
+
+.main-cont .content .body #add-task-cont #form-head #prop #top-prop #due-date{
+    width: 20px;                  /* Match the exact width of the icon */
+    height: 20px;                 /* Match the exact height of the icon */
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;            /* Hide the mm/dd/yyyy text text */
+    background: transparent;
+    position: relative;
+}
+
+.main-cont .content .body #add-task-cont #form-head #prop #top-prop #due-date::-webkit-calendar-picker-indicator{
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.main-cont .content .body #add-task-cont #form-head #prop #bottom-prop{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    border: 1px solid var(--secondary-color1);
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+.main-cont .content .body #add-task-cont #form-head #bottom-prop h4{
+    font-size: 12;
+    font-weight: 400;
+}
+
+.main-cont .content .body #add-task-cont #form-head #prop #bottom-prop #priority{
+    width: 20px;          /* Forces the closed dropdown to stay narrow */
+    text-overflow: ellipsis; /* Adds "..." if option text is too long */
+    overflow: hidden;
+    white-space: nowrap;
+
+    outline: 0;
+}
+
+.main-cont .content .body #add-task-cont #form-head #prop #bottom-prop #priority option{
+    background-color: var(--sidebarBg);
+    color: var(--primary-color);
+    border-radius: 8px;
+    padding: 0 20px;
+
+}
+
+/* form btn */
+
+.main-cont .content .body #add-task-cont #form-btn{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid var(--secondary-color1);
+
+}
+
+
+.main-cont .content .body #add-task-cont #form-btn #submit-btn{
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    border: 0;
+    background-color: var(--red);
+    color: var(--background-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+
+}
+
+.main-cont .content .body #add-task-cont #form-btn #submit-btn:hover{
+    background-color: var(--red1);
+
+}
+
+.main-cont .content .body #add-task-cont #form-btn #cancel-btn{
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    border: 0;
+    background-color: var(--secondary-color2);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.main-cont .content .body #add-task-cont #form-btn #cancel-btn:hover{
+    background-color: var(--secondary-color1);
 }
