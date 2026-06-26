@@ -43,13 +43,15 @@ body {
 .main-cont .sidebar {
     background-color: var(--sidebarBg);
     border-right: 1px solid var(--secondary-color);
-    grid-column: 1/2;
-    grid-row: 1/2;
+    /* grid-column: 1/2;
+    grid-row: 1/2; */
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
+
 
 .sidebar .nav {
     display: flex;
@@ -163,16 +165,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--sidebarBg);
+    /* background-color: var(--sidebarBg); */
     height: 8%;
     gap: 10px;
 }
 
 .main-cont .content .header h2{
-    font-size: 36px;
+    font-size: 2rem;
     padding: 10px 20px;
     color: var(--red);
-    background-color: var(--secondary-color1);
+    background-color: var(--secondary-color2);
     border-radius: 10px;
 }
 
@@ -184,7 +186,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 20px;
     width: 100%;
 }
 
@@ -194,6 +196,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    gap: 50px;
 }
 
 /* form */
@@ -247,8 +250,6 @@ body {
 } 
 
 .main-cont .content .body #add-task-cont #form-head #task-h #task-title{
-    /* padding: 10px 0px; */
-    padding-left: 0px;
     font-size: 1.5rem;
 } 
 
@@ -288,6 +289,7 @@ body {
 }
 
 .main-cont .content .body #add-task-cont #form-head #prop #top-prop h4{
+    color: var(--secondary-color);
     font-size: 12;
     font-weight: 400;
 }
@@ -309,6 +311,7 @@ body {
     width: 20px;
     height: 20px;
     cursor: pointer;
+    
 }
 
 .main-cont .content .body #add-task-cont #form-head #prop #bottom-prop{
@@ -321,6 +324,7 @@ body {
 }
 
 .main-cont .content .body #add-task-cont #form-head #bottom-prop h4{
+    color: var(--secondary-color);
     font-size: 12;
     font-weight: 400;
 }
@@ -330,14 +334,14 @@ body {
     text-overflow: ellipsis; /* Adds "..." if option text is too long */
     overflow: hidden;
     white-space: nowrap;
-
+    display: flex;
+    border-radius: 3px;
     outline: 0;
 }
 
 .main-cont .content .body #add-task-cont #form-head #prop #bottom-prop #priority option{
     background-color: var(--sidebarBg);
     color: var(--primary-color);
-    border-radius: 8px;
     padding: 0 20px;
 
 }
@@ -390,3 +394,45 @@ body {
 .main-cont .content .body #add-task-cont #form-btn #cancel-btn:hover{
     background-color: var(--secondary-color1);
 }
+
+.main-cont .remove {
+    width: 50px;
+}
+
+/* task cont */
+.main-cont .content .body #tasks-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    border: 1px solid var(--secondary-color1);
+    border-radius: 20px;
+}
+
+.main-cont .content .body .tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+
+}
+
+.main-cont .content .body .tasks .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid var(--secondary-color1);
+
+}
+
+.main-cont .content .body .tasks .col .title{
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
