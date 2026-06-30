@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
+    <!-- FontAwesome Link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="fav/favicon.svg" />
     <link rel="shortcut icon" href="fav/favicon.ico" />
@@ -61,6 +66,7 @@
 
             <div class="projects-cont">
                 <h3>My Projects</h3>
+                <div class="projects"></div>
             </div>
             </div>
           
@@ -74,6 +80,7 @@
             </div>
             
         </div>
+
         <div class="content">
             <div class="header">
                 <h2>Add Task</h2>
@@ -89,7 +96,8 @@
                             <div id="form-head">
                                 <div id="task-h">
                                 <input type="text" id="task-title" class="title" placeholder="Task Name">
-                                <input type="text" id="task-desc" placeholder="Description">
+                                <!-- <input type="text" id="task-desc" placeholder="Description"> -->
+                                <textarea rows="" id="task-desc" placeholder="Type your long text here..."></textarea>
                             </div>
 
                             <div id="prop">
@@ -102,10 +110,10 @@
                                 <div id="bottom-prop">
 
                                     <select name="" id="priority" placeholder="Description">
-                                        <option value="" selected disabled hidden></option>
-                                        <option value="">Low</option>
-                                        <option value="">Medium</option>
-                                        <option value="">High</option>
+                                        <option value=""  disabled hidden></option>
+                                        <option value="Low" selected >Low</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="High">High</option>
                                     </select>
 
                                     <h4>Priority</h4>
@@ -124,7 +132,32 @@
                         
                     </div>
 
-                    <div id="tasks-cont"></div>
+                    <div id="tasks-cont">
+                        <!-- <div class="tasks">
+
+                            <div>
+                            <div class="col">
+                                <div class="featCont">
+                                     <div class="titlecont">
+                                    <button class="checkTask">✔</button>
+                                    <h2 class="newTaskTitle">A test</h2>
+                                </div>
+
+                                <div class="propCont">
+                                    <h3 class="newTaskDueDate">Jun 23</h3>
+                                    <h3 class="newTaskPriority">High</h3>
+
+                                </div>
+
+                                </div> 
+                                
+                                <p class="newTaskDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, rem corrupti tempore dolore at fuga esse aut. Velit iure esse ut, odio debitis possimus asperiores obcaecati, neque nisi voluptatum quibusdam!</p>
+                            </div>
+                            </div>
+
+                        </div> -->
+                        
+                    </div>
 
                 </div>
 
