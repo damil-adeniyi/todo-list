@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -116,7 +116,7 @@ body {
 
 .sidebar-top .projects-cont h3 {
    color: var(--secondary-color);
-   font-size: 18px;
+   font-size: 1rem;
    font-weight: 600;
 }
 
