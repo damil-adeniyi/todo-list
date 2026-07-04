@@ -378,13 +378,61 @@ body {
 
 /* form btn */
 
-.main-cont .content .body #add-task-cont #form-btn{
+.main-cont .content .body #add-task-cont #form-foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     width: 100%;
+    border-top: 1px solid var(--secondary-color1);
     padding: 20px;
+}
+
+.main-cont .content .body #add-task-cont #projects-drop{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--secondary-color1);
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+.main-cont .content .body #add-task-cont #projects-dropdown{
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-overflow: ellipsis; 
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 3px;
+    display: flex;
+    border-radius: 3px;
+    outline: 0;
+}
+
+.main-cont .content .body #add-task-cont #projects-dropdown option{
+    background-color: var(--sidebarBg);
+    color: var(--primary-color);
+    padding: 0 20px;
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    outline: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.main-cont .content .body #add-task-cont #projects-drop h4{
+    color: var(--secondary-color);
+    font-size: 12;
+    font-weight: 400;
+}
+
+.main-cont .content .body #add-task-cont #form-btn{
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    border-top: 1px solid var(--secondary-color1);
 
 }
 
@@ -501,6 +549,10 @@ body {
     color: var(--secondary-color);
 }
 
+.main-cont .content .body .tasks .col .strike{
+    text-decoration: line-through;
+}
+
 .main-cont .content .body .tasks .col .featCont .propCont{
     display: flex;
     align-items: center;
@@ -514,4 +566,39 @@ body {
     font-size: 1rem;
     border-radius: 5px;
     font-weight: 600;
+}
+
+.main-cont .content .body .tasks .col .col-foot{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-cont .content .body .tasks .col .col-foot h3{
+    background-color: var(--sidebarBgHover);
+    color: var(--secondary-color);
+    padding: 5px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.main-cont .content .body .tasks .col .col-foot button{
+        font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    border: 0;
+    background-color: var(--red);
+    color: var(--background-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+
+}
+
+.main-cont .content .body .tasks .col .col-foot button:hover{
+    background-color: var(--red1);
+
 }
