@@ -47,6 +47,7 @@ const taskTitle = document.querySelector("#task-title")
 const taskDesc = document.querySelector("#task-desc")
 const dueDate = document.querySelector("#due-date")
 const priority = document.querySelector("#priority")
+const projectName = document.querySelector("#projects-dropdown")
 
 
 addTaskBtn.addEventListener('click', function (e) {
@@ -54,13 +55,18 @@ addTaskBtn.addEventListener('click', function (e) {
 
     // task cont
     let tasks = document.createElement("div")
+    // if(taskTitle.value === "") {
+    //     alert('Enter a Title')
+    // }
+
+
     tasks.innerHTML = `<div>
-                            <div class="col">
-                                <div class="featCont">
+                                <div class="col">
+                                    <div class="featCont">
                                      <div class="titlecont">
                                     <button class="checkTask">✔</button>
                                     <h2 class="newTaskTitle">${taskTitle.value}</h2>
-                                </div>
+                                    </div>
 
                                 <div class="propCont">
                                     <h3 class="newTaskDueDate">${format((dueDate.value), 'LLL d')}</h3>
@@ -68,13 +74,33 @@ addTaskBtn.addEventListener('click', function (e) {
 
                                 </div>
 
-                                </div> 
+                                    </div> 
+                                    <p class="newTaskDesc">${taskDesc.value}</p>
+                                    <div class="col-foot">
+                                    <h3 class="newprojectName">${projectName.value}</h3>
+                                    <button type="submit" class="delete-btn">Delete</button>
+                                    </div>
+                                </div>
                                 
-                                <p class="newTaskDesc">${taskDesc.value}</p>
-                            </div>
                             </div>`
 
     tasks.classList.add('tasks')
     taskCont.appendChild(tasks)
+
+
+    let checkTask = document.querySelector('.checkTask');
+    let newTaskTitle = document.querySelector('.newTaskTitle');
+    let newTaskDesc = document.querySelector('.newTaskDesc');
+    checkTask.addEventListener('click', function(e) {
+        newTaskTitle.classList.toggle('strike');
+        newTaskDesc.classList.toggle('strike');
+    })
+
+    let deleteBtn = document.querySelector('.delete-btn');
+    deleteBtn.addEventListener('click', function(e) {
+        let target = e.target;
+        target.parentElement.parentElement.parentElement.parentElement.remove();
+        
+    })
 
 });
