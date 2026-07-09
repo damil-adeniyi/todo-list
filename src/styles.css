@@ -43,7 +43,7 @@ body {
 /* sidebar */
 .main-cont .sidebar {
     background-color: var(--sidebarBg);
-    border-right: 1px solid var(--secondary-color);
+    /* border-right: 1px solid var(--secondary-color); */
     /* grid-column: 1/2;
     grid-row: 1/2; */
     padding: 50px 20px;
@@ -488,7 +488,7 @@ body {
     border-radius: 20px;
 }
 
-.main-cont .content .body .tasks {
+.main-cont .content .body .taskCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -499,7 +499,7 @@ body {
 }
 
 /* col */
-.main-cont .content .body .tasks .col{
+.main-cont .content .body .taskCard .col{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -509,19 +509,19 @@ body {
     /* border: 1px solid var(--secondary-color1); */
 }
 
-.main-cont .content .body .tasks .col .featCont{
+.main-cont .content .body .taskCard .col .featCont{
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
-.main-cont .content .body .tasks .col .featCont .titlecont{
+.main-cont .content .body .taskCard .col .featCont .titlecont{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.main-cont .content .body .tasks .col .featCont .titlecont .checkTask{
+.main-cont .content .body .taskCard .col .featCont .titlecont .checkTask{
     height: 24px;
     width: 24px;
     border-radius: 50%;
@@ -531,35 +531,35 @@ body {
     transition: all ease-in-out 0.3s;
 }
 
-.main-cont .content .body #tasks-cont .checkTask:hover{
+.main-cont .content .body #taskCard-cont .checkTask:hover{
     background-color: var(--red);
     color: var(--background-color)
 }
 
-.main-cont .content .body .tasks .col .titlecont .newTaskTitle{
+.main-cont .content .body .taskCard .col .titlecont .newTaskTitle{
     font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 1.5rem;
     color: var(--primary-color);
     font-weight: 600;
 }
 
-.main-cont .content .body .tasks .col .newTaskDesc{
+.main-cont .content .body .taskCard .col .newTaskDesc{
     font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 1rem;
     color: var(--secondary-color);
 }
 
-.main-cont .content .body .tasks .col .strike{
+.main-cont .content .body .taskCard .col .strike{
     text-decoration: line-through;
 }
 
-.main-cont .content .body .tasks .col .featCont .propCont{
+.main-cont .content .body .taskCard .col .featCont .propCont{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.main-cont .content .body .tasks .col .featCont .propCont h3{
+.main-cont .content .body .taskCard .col .featCont .propCont h3{
     background-color: var(--sidebarBgHover);
     color: var(--secondary-color);
     padding: 5px 15px;
@@ -568,14 +568,14 @@ body {
     font-weight: 600;
 }
 
-.main-cont .content .body .tasks .col .col-foot{
+.main-cont .content .body .taskCard .col .col-foot{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.main-cont .content .body .tasks .col .col-foot h3{
+.main-cont .content .body .taskCard .col .col-foot h3{
     background-color: var(--sidebarBgHover);
     color: var(--secondary-color);
     padding: 5px 15px;
@@ -584,7 +584,7 @@ body {
     font-weight: 600;
 }
 
-.main-cont .content .body .tasks .col .col-foot button{
+.main-cont .content .body .taskCard .col .col-foot button{
         font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     border: 0;
     background-color: var(--red);
@@ -598,7 +598,7 @@ body {
 
 }
 
-.main-cont .content .body .tasks .col .col-foot button:hover{
+.main-cont .content .body .taskCard .col .col-foot button:hover{
     background-color: var(--red1);
 
 }
