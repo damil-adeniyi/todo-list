@@ -35,6 +35,7 @@ class Task {
                 dueDate = format(new Date(), 'LLL d'),
                 priority = 'low',
                 projectNa) {
+            this.id = crypto.randomUUID();        
             this.title = title;
             this.desc = desc;
             this.dueDate = dueDate;
@@ -112,13 +113,25 @@ function displayTask() {
                 newTaskDesc.classList.toggle('strike');
             })
 
+            taskCard.setAttribute('data-id', task.id);
             //delete task
             const deleteBtn = taskCard.querySelector('.delete-btn');
             deleteBtn.addEventListener('click', function(e) {
                 console.log('delete');
                 
-                const target = e.target;
-                target.parentElement.parentElement.parentElement.parentElement.remove();
+                // const target = e.target;
+                // target.parentElement.parentElement.parentElement.parentElement.remove();
+
+                // Retrieve the unique ID string from the parent card element
+                    const targetId = taskCard.getAttribute('data-id');
+            
+                // Find the array index where the book object matches this ID
+                    const targetIndex = projectCont.findIndex(item => item.id === targetId);
+            
+                    if (targetIndex !== -1) {
+                    projectCont.splice(targetIndex, 1); // Mutate array data safely
+                    displayTask(); // Re-render modern UI view layout
+                    }
                 
             })
 
