@@ -29,7 +29,7 @@ p {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     background-color: var(--background-color);
 }
 
@@ -91,7 +91,7 @@ body {
     border-radius: 10px;
 }
 
-.sidebar span {
+.sidebar .features-cont span {
     width: 24px;
     height: 24px;
 }
@@ -102,22 +102,99 @@ body {
 
 .sidebar .projects-cont {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 10px; 
     margin-top: 30px;
     padding: 5px 10px;
     cursor: pointer;
     transition: all ease-in-out 0.3s;
 }
 
-.sidebar .projects-cont:hover {
+.sidebar .projects-cont #new-project-form{
+    display: flex;
+    gap: 10px; 
+    transition: all ease-in-out 0.3s;
+}
+
+.sidebar .projects-cont #new-project-form input[type="text"] {
+    display: flex;
+    padding-left: 5px;
+    border: 1px solid var(--secondary-color1);
+    border-radius: 5px;
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.sidebar .projects-cont #new-project-form button {
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 5px;
+    color: var(--primary-color);
     background-color: var(--secondary-color1);
-    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.sidebar .projects-cont #new-project-form button:hover {
+    color: var(--sidebarBg);
+    background-color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.sidebar .projects-cont .sidebar-projects-list {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 10px;
+    list-style: none;
+}
+
+.sidebar .projects-cont .sidebar-projects-list li:hover {
+    color: var(--red);
+}
+
+.sidebar .projects-cont .projects {
+    display: flex; 
+    transition: all ease-in-out 0.3s; 
+}
+
+.sidebar .projects-cont .sidebar-projects-list li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar .projects-cont .sidebar-projects-list .active-project{
+    color: var(--red);
+}
+
+.sidebar .projects-cont .sidebar-projects-list .delete-project-btn{
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    padding: 5px 10px;
+    border: 0px;
+    border-radius: 5px;
+    color: var(--background-color);
+    background-color: var(--red);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sidebar .projects-cont .sidebar-projects-list .delete-project-btn:hover{
+    background-color: var(--red1);
+    font-weight: 600;
+}
+
+.sidebar .projects-cont h3:hover {
+    background-color: var(--secondary-color1);
 }
 
 .sidebar-top .projects-cont h3 {
    color: var(--secondary-color);
    font-size: 1rem;
    font-weight: 600;
+   padding: 5px 10px;
+   border-radius: 5px;
+   transition: all ease-in-out 0.3s;
 }
 
 .sidebar .help {
