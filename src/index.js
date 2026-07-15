@@ -220,11 +220,13 @@ myProjects.addEventListener('click', function () {
 // toggle sidebar
 const togglebtn = document.querySelector(".toggle")
 const sidebar = document.querySelector(".sidebar")
+const container = document.querySelector(".main-cont")
 
 togglebtn.addEventListener('click', function () {
     sidebar.classList.toggle('active')
     sidebar.classList.toggle('smooth')
     togglebtn.classList.toggle('active-toggle')
+    container.classList.toggle('full-width')
 });
 
 // ==========================================
