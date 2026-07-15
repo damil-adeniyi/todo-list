@@ -35,7 +35,7 @@ body {
 
 .main-cont {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 320px 1fr;
     height: 1350px;
 }
 
@@ -50,9 +50,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: margin-left 0.3s cubic-bezier(.4,0,.2,1);
+    /* position: relative; */
 }
-
-
 
 .sidebar .nav {
     display: flex;
@@ -60,6 +60,49 @@ body {
     align-items: center;
     padding: 5px 10px;
     margin-bottom: 30px;
+    
+}
+
+.nav .toggleBtn {
+    cursor: pointer;
+    height: 42px;
+    width: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: all ease-in-out 0.3s;
+    
+}
+
+.nav .toggleBtn:hover {
+    background-color: var(--secondary-color1);
+    
+}
+
+.sidebar .toggle {
+    position: absolute;
+    top: 42px;
+    left: 250px;
+    transition: left 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.active {
+    width: 10px;
+    margin-left: -350px;
+    /* overflow: hidden; */
+}
+.sidebar .active-toggle {
+    position: absolute;
+    top: 42px;
+    left: 20px;
+    transition: left 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.smooth {
+    transition: margin-left 0.3s cubic-bezier(.4,0,.2,1);
 }
 
 .sidebar .features-cont {
@@ -210,24 +253,6 @@ body {
 .sidebar .help:hover {
     background-color: var(--secondary-color1);
     border-radius: 10px;
-}
-
-.nav button {
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-    border-radius: 5px;
-    background-color: transparent;
-    transition: all ease-in-out 0.3s;
-    
-}
-.nav button:hover {
-    background-color: var(--secondary-color1);
-    
 }
 
 /* content */
@@ -607,6 +632,24 @@ body {
     cursor: pointer;
     transition: all ease-in-out 0.3s;
 }
+
+.main-cont .content .body .taskCard .col .featCont .titlecont input{
+    font-family: 'Twemoji Country Flags', 'Twemoji Country Flags', -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    border: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+} 
+
+.main-cont .content .body .taskCard .col .featCont .titlecont input:focus{
+  outline: 0;
+}
+
+.main-cont .content .body .taskCard .col .featCont .titlecont input::placeholder{
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+} 
 
 .main-cont .content .body #taskCard-cont .checkTask:hover{
     background-color: var(--red);

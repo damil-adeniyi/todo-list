@@ -136,7 +136,7 @@ function renderProjectsUI() {
             const deleteProjBtn = document.createElement("button");
             deleteProjBtn.textContent = "Delete";
             deleteProjBtn.classList.add("delete-project-btn");
-            deleteProjBtn.style.marginLeft = "10px";
+            deleteProjBtn.style.marginLeft = "0px";
             
             deleteProjBtn.addEventListener("click", (e) => {
                 e.stopPropagation(); // Prevents triggering the active switch click above
@@ -216,6 +216,16 @@ if (newProjectForm) {
 myProjects.addEventListener('click', function () {
     projects.classList.toggle('projects');
 })
+
+// toggle sidebar
+const togglebtn = document.querySelector(".toggle")
+const sidebar = document.querySelector(".sidebar")
+
+togglebtn.addEventListener('click', function () {
+    sidebar.classList.toggle('active')
+    sidebar.classList.toggle('smooth')
+    togglebtn.classList.toggle('active-toggle')
+});
 
 // ==========================================
 // INITIAL APP INITIALIZATION
