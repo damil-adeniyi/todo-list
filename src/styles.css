@@ -35,23 +35,31 @@ body {
 
 .main-cont {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 1fr;
     height: 1350px;
+    transition: grid-template-columns 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.full-width {
+    display: grid;
+    grid-template-columns:  1fr;
+    height: 1350px;
+    transition: grid-template-columns 0.3s cubic-bezier(.4,0,.2,1);
 }
 
 
 /* sidebar */
 .main-cont .sidebar {
     background-color: var(--sidebarBg);
-    /* border-right: 1px solid var(--secondary-color); */
-    /* grid-column: 1/2;
-    grid-row: 1/2; */
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: margin-left 0.3s cubic-bezier(.4,0,.2,1);
-    /* position: relative; */
+    position: fixed;
+    height: 1350px;
+    z-index: 2;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
 }
 
 .sidebar .nav {
@@ -64,6 +72,7 @@ body {
 }
 
 .nav .toggleBtn {
+    position: fixed;
     cursor: pointer;
     height: 42px;
     width: 42px;
@@ -95,7 +104,7 @@ body {
     /* overflow: hidden; */
 }
 .sidebar .active-toggle {
-    position: absolute;
+    position: fixed;
     top: 42px;
     left: 20px;
     transition: left 0.3s cubic-bezier(.4,0,.2,1);
@@ -721,4 +730,15 @@ body {
 .main-cont .content .body .taskCard .col .col-foot button:hover{
     background-color: var(--red1);
 
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .main-cont .content .body #form {
+    width: 80%;
+}
+
+.main-cont .content .body #tasks-cont {
+    width: 80%;
+}
 }
